@@ -19,9 +19,9 @@ const rappers = {
         'birthLocation': 'Chicago, Illinois'
     },
     'dylan':{
-        'age': 29,
+        'age': 30,
         'birthName': 'Dylan',
-        'birthLocation': 'Dylan'
+        'birthLocation': 'Minsk'
     }
 }
 
@@ -30,8 +30,8 @@ app.get('/', (request, response)=>{
     response.sendFile(__dirname + '/index.html')    
 })
 
-app.get('/api/:rapperName', (request, response)=>{
-    const rappersName = request.params.rapperName.toLowerCase()
+app.get('/api/:name', (request, response)=>{
+    const rappersName = request.params.name.toLowerCase()
     if(rappers[rappersName]){
         response.json(rappers[rappersName])
     }else{
