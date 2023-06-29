@@ -15,6 +15,7 @@ async function apiRequest() {
     document.querySelector('#image').src = data.URL;
 
     
+    
   } catch (error) {
     console.log(error);
   }
